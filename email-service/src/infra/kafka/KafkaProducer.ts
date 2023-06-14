@@ -5,7 +5,7 @@ export class KafkaProducer implements KafkaProducerInterface{
     private producer: Producer
     constructor(private kafkaClient: any) {
         this.producer = new Producer(kafkaClient);
-      }
+    }
     
     send(topic: string, msg: string): void {
        const ṕayloads: ProduceRequest[] = [
