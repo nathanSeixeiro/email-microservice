@@ -12,7 +12,7 @@ class KafkaConsumer implements KafkaConsumerInterface{
   constructor(kafka: Kafka){
     this.consumer = kafka.consumer({groupId: 'email-consumer'});
   }  
-  async runConsumer(consumer: Consumer, topic:string){
+  async runConsumer(topic:string){
     await this.consumer.connect()
     await this.consumer.subscribe({ topic: topic})
 
