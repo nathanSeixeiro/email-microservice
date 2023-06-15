@@ -7,9 +7,9 @@ const consumer = new KafkaConsumer(kafka)
 
 // Exemplo de envio de e-mail (usando o Kafka)
 const emailMessage = {
-    to: 'recipient@example.com',
-    subject: 'Assunto do e-mail',
-    text: 'Conteúdo do e-mail',
+    to: 'seixeironathan@gmail.com',
+    subject: 'teste microserviço de envio de email',
+    text: 'Se chegamos até aqui funcionou, parabéns!',
   };
   
   producer.sendMessageToKafka(emailMessage)
@@ -17,6 +17,6 @@ const emailMessage = {
     .catch((error) => console.error('Erro ao enviar mensagem para o Kafka:', error));
   
   // Inicia o consumidor do Kafka
-  consumer.runConsumer('email').catch((error) => {
+  consumer.runConsumer('emails').catch((error) => {
     console.error('Erro ao iniciar o consumidor do Kafka:', error);
   });
