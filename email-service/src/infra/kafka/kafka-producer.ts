@@ -1,7 +1,6 @@
 import { Kafka, Producer } from "kafkajs";
 import { topic } from "./kafka-config";
 
-
 class KafkaProducer implements KafkaProducerInterface{
   private producer: Producer
 
